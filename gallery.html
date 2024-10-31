@@ -1,0 +1,130 @@
+
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Anime Website</title>
+    <link rel="stylesheet" href="G styles.css">
+    <style>
+        /* Add styles for the image overlay */
+        .overlay {
+            display: none; /* Hidden by default */
+            position: fixed; /* Stay in place */
+            z-index: 1000; /* Sit on top */
+            left: 0;
+            top: 0;
+            width: 100%; /* Full width */
+            height: 100%; /* Full height */
+            background-color: rgba(0, 0, 0, 0.8); /* Black background with opacity */
+            justify-content: center; /* Center the image */
+            align-items: center; /* Center the image */
+        }
+
+        .overlay img {
+            max-width: 90%; /* Responsive width */
+            max-height: 90%; /* Responsive height */
+            border-radius: 8px;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Anime Gallery</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="news.html">News</a></li>
+                <li><a href="gallery.html">Gallery</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="gallery">
+            <h2>Featured Anime Best Images</h2>
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="https://img.freepik.com/free-photo/anime-eyes-illustration_23-2151660535.jpg" alt="Anime 1" onclick="openModal(this.src)"width=700 height="400">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://wallpapersmug.com/download/1366x768/970e1b/blue-eye-elf-girl-anime.jpg" alt="Anime 2" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://img1.wallspic.com/previews/9/2/0/8/7/178029/178029-your_name_anime-mitsuha_miyamizu-animated_cartoon-anime_art-animation-550x310.jpg" alt="Anime 3" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://i.pinimg.com/originals/a3/26/b3/a326b381aa693a6d042dd1384d71ea68.jpg" alt="Anime 4" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://motionbgs.com/media/5533/sasuke-uchiha.jpg" alt="Anime 4" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://img.freepik.com/premium-photo/girl-anime-is-walking-down-boardwalk-with-moon-4k-background_1160471-6771.jpg?semt=ais_hybrid" alt="Anime 4" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5fe4caeadae61a2f19719512/2f219cc8-480a-4711-ae28-b47a26ae41f6/Satoru+Gojo+%5B4k%5D" alt="Anime a" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://c4.wallpaperflare.com/wallpaper/472/135/807/anime-naruto-hinata-hy%C5%ABga-naruto-uzumaki-wallpaper-preview.jpg" alt="Anime b" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/d9b9c9b2-b80f-4dd6-b0f9-5191aed634c9/dhw2m1g-a27eb763-852a-494a-a6d1-00685b660a7b.jpg/v1/fill/w_1280,h_718,q_75,strp/couple_love___wallpaper_4k_by_jmasaryk_dhw2m1g-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzE4IiwicGF0aCI6IlwvZlwvZDliOWM5YjItYjgwZi00ZGQ2LWIwZjktNTE5MWFlZDYzNGM5XC9kaHcybTFnLWEyN2ViNzYzLTg1MmEtNDk0YS1hNmQxLTAwNjg1YjY2MGE3Yi5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.ifhTfFMCBrYxSNv292pM6dZdR2vtFTfPDJTtBXqy8qY" alt="Anime c" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://wallpapers.com/images/hd/hinata-kissing-naruto-wnh9zbf73fgd1mav.jpg" alt="Anime d" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images7.alphacoders.com/137/thumb-1920-1377877.png" alt="Anime e" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.hdqwalls.com/wallpapers/a-couples-harmonious-connection-ny.jpg" alt="Anime f" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://wallpapers.com/images/hd/anime-love-pictures-uo4lvf44fv155bw6.jpg" alt="Anime g" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://wallpapers.com/images/hd/love-anime-couple-your-lie-in-april-5z2miepj24b9ibye.jpg" alt="Anime h" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.hdqwalls.com/wallpapers/an-anime-couple-romantic-duet-5e.jpg" alt="Anime i" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://backiee.com/static/wallpapers/560x315/378713.jpg" alt="Anime j" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://img.freepik.com/premium-photo/anime-happy-valentine-background_618552-3070.jpg?semt=ais_hybrid" alt="Anime k" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <div class="gallery-item">
+                    <img src="https://images.hdqwalls.com/wallpapers/home-in-your-arms-58.jpg" alt="Anime l" onclick="openModal(this.src)"width=500 height="300">
+                </div>
+                <!-- Add more images as needed -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Overlay for zoomed image -->
+    <div class="overlay" id="imageOverlay" onclick="closeModal()">
+        <img id="overlayImage" src="" alt="Zoomed Image">
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Anime Website. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to open the modal with the clicked image
+        function openModal(src) {
+            document.getElementById('overlayImage').src = src; // Set the source of the overlay image
+            document.getElementById('imageOverlay').style.display = 'flex'; // Show the overlay
+        }
+
+        // Function to close the modal when clicking the overlay
+        function closeModal() {
+            document.getElementById('imageOverlay').style.display = 'none'; // Hide the overlay
+        }
+    </script>
+</body>
+</html>

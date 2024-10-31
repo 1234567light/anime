@@ -1,0 +1,243 @@
+/* Reset some default styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #1a1a1d;
+    color: #f5f5f5;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #222;
+}
+
+header .logo {
+    font-size: 1.5rem;
+    color: #f39c12;
+    font-weight: bold;
+}
+
+header nav a {
+    color: #f5f5f5;
+    text-decoration: none;
+    margin: 0 1rem;
+    font-weight: 500;
+    transition: color 0.3s;
+}
+
+header nav a:hover {
+    color: #f39c12;
+}
+
+/* Main Featured Section */
+.featured {
+    text-align: center;
+    padding: 2rem 1rem;
+    background-color: #333;
+    margin-bottom: 2rem;
+}
+
+.featured img {
+    width: 50%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin-bottom: 1rem;
+}
+
+.featured h1 {
+    font-size: 2rem;
+    color: #f39c12;
+    margin-bottom: 0.5rem;
+}
+
+.featured p {
+    font-size: 1.2rem;
+    color: #ddd;
+}
+
+/* Content Section */
+.content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+    padding: 1rem;
+}
+
+.content-box {
+    background-color: #444;
+    width: 300px;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s;
+}
+
+.content-box:hover {
+    transform: translateY(-10px);
+}
+
+.content-box img {
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 0.5rem;
+}
+
+.content-box h2 {
+    color: #f39c12;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.content-box p {
+    color: #ddd;
+    font-size: 0.9rem;
+    line-height: 1.5;
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 1rem;
+    background-color: #222;
+    color: #777;
+    font-size: 0.9rem;
+}
+
+
+
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 768px) {
+    /* Header */
+    header {
+        flex-direction: column;
+        align-items: center;
+    }
+    header nav a {
+        margin: 0.5rem;
+    }
+
+    /* Featured Section */
+    .featured-images {
+        flex-direction: column;
+    }
+    .featured-images img {
+        width: 80%;
+        max-width: 250px;
+        margin-bottom: 1rem;
+    }
+
+    /* Content Section */
+    .content {
+        flex-direction: column;
+        align-items: center;
+    }
+    .content-box {
+        width: 90%;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Reduce font sizes for smaller screens */
+    header .logo {
+        font-size: 1.2rem;
+    }
+    .featured h1 {
+        font-size: 1.5rem;
+    }
+    .featured p {
+        font-size: 1rem;
+    }
+    .content-box h2 {
+        font-size: 1.3rem;
+    }
+    .content-box p {
+        font-size: 0.85rem;
+    }
+}
+
+
+
+
+/* Hover effect for content boxes */
+.content-box:hover {
+    transform: translateY(-10px) scale(1.02);
+    box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Hover effect for images in featured section */
+.featured-images img:hover {
+    transform: scale(1.05);
+    transition: transform 0.3s;
+}
+
+
+
+
+
+/* Footer Styles */
+footer {
+    background-color: #282c34; /* Dark footer */
+    color: #61dafb; /* Light blue text */
+    text-align: center;
+    padding: 20px 0;
+    margin-top: 20px; /* Space above footer */
+}
+
+/* Social Icons */
+.social-icons {
+    margin-top: 10px;
+}
+
+.social-icons a {
+    display: inline-block;
+    margin: 0 10px;
+    transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.social-icons img {
+    width: 32px; /* Icon size */
+    height: 32px;
+    filter: grayscale(100%); /* Gray effect */
+    transition: filter 0.3s ease;
+}
+
+.social-icons a:hover img {
+    filter: grayscale(0%); /* Colorize on hover */
+    transform: scale(1.1); /* Slight zoom on hover */
+}
+
+
+
+
+
+/* Fade-in animation */
+.fade-in {
+    opacity: 0;
+    animation: fadeIn 1s forwards;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Apply fade-in animation */
+header, .gallery, .news, footer {
+    animation: fadeIn 1s;
+}
